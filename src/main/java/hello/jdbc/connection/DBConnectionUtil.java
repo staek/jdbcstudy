@@ -13,9 +13,9 @@ public class DBConnectionUtil {
 
     public  static Connection getConnection() {
         try {
-            Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            log.info("get connection={}, class={}", connection, getConnection().getClass());
-            return connection;
+            Connection con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            log.info("get connection={}, class={}", con, con.getClass());
+            return con;
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
